@@ -28,17 +28,8 @@ scrape_configs:
     static_configs:
     - targets: ['localhost:9090']
 
-  - job_name: node
+  - job_name: "namada"
     scrape_interval: 5s
+    metrics_path: /
     static_configs:
-    - targets: ['<NODE_IP_ADDRESS>:9100']
-
-  - job_name: near-exporter
-    scrape_interval: 15s
-    static_configs:
-    - targets: ['<NODE_IP_ADDRESS>:9333']
-
-  - job_name: near-node
-    scrape_interval: 15s
-    static_configs:
-    - targets: ['<NODE_IP_ADDRESS>:3030']
+      - targets: ['IP:26660']
