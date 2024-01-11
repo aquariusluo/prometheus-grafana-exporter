@@ -63,7 +63,7 @@ sudo docker run -dti \
 ```
 Open in your favorite browser `http://IP:9090`   
 
-### Run Grafana
+## Run Grafana
 
 open `grafana/custom.ini` and add your gmail address
 
@@ -111,6 +111,21 @@ Open in your favorite browser `http://IP:3000`
 
 Username: admin
 Password: admin
+
+### MISC
+
+Check docker logs
+```
+sudo docker exec -it <Name or ID> bash
+sudo docker logs <Name or ID>
+```
+
+Open firewall ports
+```
+sudo ufw allow 9090
+sudo ufw allow 3000
+```
+
 
 ## License
 
