@@ -51,7 +51,7 @@ Open 9100 port in your server firewall as Prometheus reads metrics on this port.
   ...
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-  - job_name: 'prometheus'
+  - job_name: "prometheus"
 
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
@@ -59,7 +59,7 @@ scrape_configs:
     static_configs:
     - targets: ['localhost:9090']
 
-  - job_name: node
+  - job_name: "node"
     scrape_interval: 5s
     static_configs:
     - targets: ['<NODE_IP_ADDRESS>:9100']
