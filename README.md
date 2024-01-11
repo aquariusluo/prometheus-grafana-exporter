@@ -21,7 +21,7 @@ docker images
 docker rm <container_name_or_id>
 docker image prune -af
 ```
-## Run Node Exporter on the Node
+## Run Node Exporter on the Namada Node
 
 First we need to deploy [namada prometheus exporter](https://github.com/aquariusluo/prometheus-grafana-exporter) service to collect custom metrics from the namada node using json-rpc.
 
