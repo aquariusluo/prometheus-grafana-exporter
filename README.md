@@ -39,11 +39,68 @@ scrape_configs:
     scrape_interval: 5s
     metrics_path: /
     static_configs:
-      - targets: ['<NAMADA_NODE_IP>:26660']
+      - targets: ['IP:26660']
   ...
 ```
 
-By default the exporter serves on `:9333` at `/metrics`.
+## Run Prometheus on your server monitoring machine
+
+```
+sudo docker run -dti \
+    --restart always \
+    --volume $(pwd)/prometheus:/etc/prometheus/ \
+    --name prometheus \
+    --network=host \
+    -p 9090:9090 prom/prometheus:latest \
+    --config.file=/etc/prometheus/prometheus.yml
+```
+
+### Run Grafana
+
+open `grafana/custom.ini` and add your gmail address
+
+```
+...
+#################################### SMTP / Emailing ##########################
+[smtp]
+enabled = true
+host = smtp.gmail.com:587 
+user = <your_gmail_address>
+# If the password contains # or ; you have to wrap it with triple quotes. Ex """#password;"""
+password = <your_gmail_password>
+;cert_file =
+;key_file =
+skip_verify = true
+from_address = <your_gmail_address>
+from_name = Grafana
+# EHLO identity in SMTP dialog (defaults to instance_name)
+;ehlo_identity = dashboard.example.com
+# SMTP startTLS policy (defaults to 'OpportunisticStartTLS') 
+;startTLS_policy = NoStartTLS
+```
+
+```
+id -u
+-> 1000
+sudo chown -R 1000:1000 grafana/*
+
+sudo docker run -dit \
+    --restart always \
+    --volume $(pwd)/grafana:/var/lib/grafana \
+    --volume $(pwd)/grafana/provisioning:/etc/grafana/provisioning \
+    --volume $(pwd)/grafana/custom.ini:/etc/grafana/grafana.ini \
+    --user 1000 \
+    --network=host \
+    --name grafana \
+    -p 3000:3000 grafana/grafana
+```
+
+Open in your favorite browser `http://IP:3000`
+
+![](https://raw.githubusercontent.com/masknetgoal634/near-prometheus-exporter/master/guide/img/image0.png)
+
+Username: admin
+Password: admin
 
 ## License
 
