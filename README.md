@@ -91,7 +91,8 @@ id -u
 -> 1000
 
 sudo chown -R 1000:1000 grafana/*
-
+```
+```
 sudo docker run -dit \
     --restart always \
     --volume $(pwd)/grafana:/var/lib/grafana \
