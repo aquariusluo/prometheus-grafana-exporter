@@ -14,11 +14,11 @@ sudo usermod -aG docker ${USER}
 sudo chown ${USER}:docker /var/run/docker.sock
 sudo systemctl restart docker
 ```
-## Clear unnessary images
+## Clear unnecessary images
 ```
 docker ps -a
 docker images
-docker rm container_name_or_id
+docker rm <container_name_or_id>
 docker image prune -af
 ```
 
