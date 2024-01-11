@@ -39,7 +39,7 @@ sudo docker run -dit \
 
 Open 9100 port in your server firewall as Prometheus reads metrics on this port.
 
-## Build own image
+## Build own image on your server monitoring machine
 
     git clone https://github.com/aquariusluo/prometheus-grafana-exporter
 
