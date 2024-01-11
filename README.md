@@ -7,12 +7,19 @@ This service exports various metrics from Near node for consumption by [Promethe
 sudo apt-get update
 sudo apt install docker.io
 ```
-## Add USER to Docker Group
+## Add ${USER} to docker group
 ```
 sudo groupadd docker
 sudo usermod -aG docker ${USER}
 sudo chown ${USER}:docker /var/run/docker.sock
 sudo systemctl restart docker
+```
+## Clear unnessary images
+```
+docker ps -a
+docker images
+docker rm container_name_or_id
+docker image prune -af
 ```
 
 ### Build own image
@@ -82,6 +89,7 @@ from_name = Grafana
 ```
 id -u
 -> 1000
+
 sudo chown -R 1000:1000 grafana/*
 
 sudo docker run -dit \
