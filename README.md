@@ -59,11 +59,15 @@ scrape_configs:
     static_configs:
     - targets: ['localhost:9090']
 
-  - job_name: "namada"
+  - job_name: node
     scrape_interval: 5s
-    metrics_path: /
     static_configs:
-      - targets: ['IP:26660']
+    - targets: ['<NODE_IP_ADDRESS>:9100']
+
+  - job_name: "namada"
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['<NODE_IP_ADDRESS>:26660']
   ...
 ```
 
