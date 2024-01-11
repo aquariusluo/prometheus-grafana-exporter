@@ -1,8 +1,8 @@
 {
   "__inputs": [
     {
-      "name": "DS_DS_PROM",
-      "label": "DS_PROM",
+      "name": "DS",
+      "label": "DS",
       "description": "",
       "type": "datasource",
       "pluginId": "prometheus",
@@ -75,7 +75,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -174,7 +174,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "rate(namada_tm_consensus_validator_missed_blocks{chain_id=\"public-testnet-15.0dacadb8d663\"}[5m])",
@@ -185,7 +185,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "rate(namada_tm_consensus_validator_missed_blocks{chain_id=\"public-testnet-15.0dacadb8d663\"}[6h])",
@@ -201,7 +201,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -254,7 +254,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_consensus_validator_missed_blocks{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -269,7 +269,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -347,7 +347,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "(namada_tm_consensus_validator_power{chain_id=\"public-testnet-15.0dacadb8d663\"})/1000000",
@@ -362,7 +362,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -415,7 +415,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "(namada_tm_consensus_validator_power{chain_id=\"public-testnet-15.0dacadb8d663\"})/1000000",
@@ -430,7 +430,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -484,7 +484,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_consensus_height{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -499,7 +499,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "consensus height",
       "fieldConfig": {
@@ -581,7 +581,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_consensus_height{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -596,7 +596,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -653,7 +653,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_consensus_validators{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -668,7 +668,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -750,7 +750,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_p2p_peers{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -765,7 +765,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -821,7 +821,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_p2p_peers{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -836,7 +836,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -918,7 +918,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "(namada_tm_consensus_validators_power{chain_id=\"public-testnet-15.0dacadb8d663\"})/1000000",
@@ -933,7 +933,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -987,7 +987,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_consensus_total_txs{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -1002,7 +1002,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1084,7 +1084,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_consensus_num_txs{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -1099,7 +1099,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -1153,7 +1153,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_mempool_recheck_times{chain_id=\"public-testnet-15.0dacadb8d663\"} ",
@@ -1168,7 +1168,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "description": "",
       "fieldConfig": {
@@ -1219,7 +1219,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_mempool_size{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -1234,7 +1234,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1313,7 +1313,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "namada_tm_consensus_block_size_bytes{chain_id=\"public-testnet-15.0dacadb8d663\"}",
@@ -1328,7 +1328,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1411,7 +1411,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "sum(rate(namada_tm_p2p_peer_send_bytes_total{chain_id=\"public-testnet-15.0dacadb8d663\"}[5m])) / 1000",
@@ -1426,7 +1426,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_DS_PROM}"
+        "uid": "${DS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1509,7 +1509,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_DS_PROM}"
+            "uid": "${DS}"
           },
           "editorMode": "code",
           "expr": "sum(rate(namada_tm_p2p_peer_receive_bytes_total{chain_id=\"public-testnet-15.0dacadb8d663\"}[5m])) / 1000",
@@ -1532,8 +1532,8 @@
       {
         "current": {
           "selected": false,
-          "text": "DS_PROM",
-          "value": "DS_PROM"
+          "text": "DS",
+          "value": "DS"
         },
         "description": "Data Source",
         "hide": 0,
