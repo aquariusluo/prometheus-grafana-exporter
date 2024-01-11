@@ -21,8 +21,25 @@ docker images
 docker rm <container_name_or_id>
 docker image prune -af
 ```
+## Run Node Exporter on the Node
 
-### Build own image
+First we need to deploy [namada prometheus exporter](https://github.com/aquariusluo/prometheus-grafana-exporter) service to collect custom metrics from the namada node using json-rpc.
+
+```
+sudo docker run -dit \
+    --restart always \
+    --volume /proc:/host/proc:ro \
+    --volume /sys:/host/sys:ro \
+    --volume /:/rootfs:ro \
+    --name node-exporter \
+    -p 9100:9100 prom/node-exporter:latest \
+    --path.procfs=/host/proc \
+    --path.sysfs=/host/sys
+```
+
+Open 9100 port in your server firewall as Prometheus reads metrics on this port.
+
+## Build own image
 
     git clone https://github.com/aquariusluo/prometheus-grafana-exporter
 
@@ -112,7 +129,7 @@ Open in your favorite browser `http://IP:3000`
 Username: admin
 Password: admin
 
-### MISC
+## MISC
 
 Check docker logs
 ```
