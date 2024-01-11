@@ -61,6 +61,7 @@ sudo docker run -dti \
     -p 9090:9090 prom/prometheus:latest \
     --config.file=/etc/prometheus/prometheus.yml
 ```
+Open in your favorite browser `http://IP:9090`   
 
 ### Run Grafana
 
