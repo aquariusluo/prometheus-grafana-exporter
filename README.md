@@ -59,15 +59,25 @@ scrape_configs:
     static_configs:
     - targets: ['localhost:9090']
 
-  - job_name: "node"
+  - job_name: "node1"
     scrape_interval: 5s
     static_configs:
-    - targets: ['<NODE_IP_ADDRESS>:9100']
+    - targets: ['<NODE_1_IP_ADDRESS>:9100']
 
-  - job_name: "namada"
+  - job_name: "namada_1"
     scrape_interval: 15s
     static_configs:
-      - targets: ['<NODE_IP_ADDRESS>:26660']
+      - targets: ['<NODE_1_IP_ADDRESS>:26660']
+
+  - job_name: "node2"
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['<NODE_2_IP_ADDRESS>:9100']
+
+  - job_name: "namada_2"
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['<NODE_2_IP_ADDRESS>:26660']
   ...
 ```
 
