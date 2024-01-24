@@ -25,7 +25,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 4,
+  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -85,7 +85,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unitScale": true
         },
         "overrides": [
           {
@@ -135,7 +136,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "rate(namada_tm_consensus_validator_missed_blocks{chain_id=\"public-testnet-15.0dacadb8d663\"}[5m])",
+          "expr": "rate(namada_tm_consensus_validator_missed_blocks{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}[5m])",
           "legendFormat": "5 min",
           "range": true,
           "refId": "A"
@@ -181,7 +182,8 @@
               }
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -204,10 +206,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -215,7 +218,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_consensus_validator_missed_blocks{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_consensus_validator_missed_blocks{chain_id=\"public-testnet-15.0dacadb8d663\", instance=\"$node:26660\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -250,7 +253,8 @@
               }
             ]
           },
-          "unit": "s"
+          "unit": "s",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -273,10 +277,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -348,7 +353,8 @@
               }
             ]
           },
-          "unit": "none"
+          "unit": "none",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -378,7 +384,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "(namada_tm_consensus_validator_power{chain_id=\"public-testnet-15.0dacadb8d663\"})/1000000",
+          "expr": "(namada_tm_consensus_validator_power{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"})/1000000",
           "legendFormat": "{{validator_address}}",
           "range": true,
           "refId": "A"
@@ -412,7 +418,8 @@
               }
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -435,10 +442,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -446,7 +454,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "(namada_tm_consensus_validator_power{chain_id=\"public-testnet-15.0dacadb8d663\"})/1000000",
+          "expr": "(namada_tm_consensus_validator_power{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"})/1000000",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -481,7 +489,8 @@
               }
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -504,10 +513,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -515,7 +525,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_consensus_height{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_consensus_height{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "{{chain_id}}",
           "range": true,
           "refId": "A"
@@ -583,7 +593,8 @@
                 "color": "green"
               }
             ]
-          }
+          },
+          "unitScale": true
         },
         "overrides": []
       },
@@ -613,7 +624,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_consensus_height{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_consensus_height{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "{{chain_id}}",
           "range": true,
           "refId": "A"
@@ -653,7 +664,8 @@
               }
             ]
           },
-          "unit": "none"
+          "unit": "none",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -679,7 +691,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -687,7 +699,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_consensus_validators{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_consensus_validators{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -755,7 +767,8 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "short",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -785,7 +798,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_p2p_peers{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_p2p_peers{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "Peers Tendency",
           "range": true,
           "refId": "A"
@@ -824,7 +837,8 @@
                 "value": 50
               }
             ]
-          }
+          },
+          "unitScale": true
         },
         "overrides": []
       },
@@ -850,7 +864,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -858,7 +872,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_p2p_peers{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_p2p_peers{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -926,7 +940,8 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "short",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -956,7 +971,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "(namada_tm_consensus_validators_power{chain_id=\"public-testnet-15.0dacadb8d663\"})/1000000",
+          "expr": "(namada_tm_consensus_validators_power{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"})/1000000",
           "legendFormat": "Voting Power Total",
           "range": true,
           "refId": "A"
@@ -991,7 +1006,8 @@
               }
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1014,10 +1030,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1025,7 +1042,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_consensus_total_txs{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_consensus_total_txs{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "{{chain_id}}",
           "range": true,
           "refId": "A"
@@ -1093,7 +1110,8 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "short",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1123,7 +1141,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_consensus_num_txs{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_consensus_num_txs{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "Transactions",
           "range": true,
           "refId": "A"
@@ -1158,7 +1176,8 @@
               }
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1181,10 +1200,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1192,7 +1212,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_mempool_recheck_times{chain_id=\"public-testnet-15.0dacadb8d663\"} ",
+          "expr": "namada_tm_mempool_recheck_times{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"} ",
           "legendFormat": "{{chain_id}}",
           "range": true,
           "refId": "A"
@@ -1224,7 +1244,8 @@
               }
             ]
           },
-          "unit": "none"
+          "unit": "none",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1247,10 +1268,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1258,7 +1280,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_mempool_size{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_mempool_size{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "Uncommitted transactions",
           "range": true,
           "refId": "A"
@@ -1322,7 +1344,8 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "short",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1353,7 +1376,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "namada_tm_consensus_block_size_bytes{chain_id=\"public-testnet-15.0dacadb8d663\"}",
+          "expr": "namada_tm_consensus_block_size_bytes{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}",
           "legendFormat": "Block Size (Bytes)",
           "range": true,
           "refId": "A"
@@ -1421,7 +1444,8 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "short",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1452,7 +1476,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(namada_tm_p2p_peer_send_bytes_total{chain_id=\"public-testnet-15.0dacadb8d663\"}[5m])) / 1000",
+          "expr": "sum(rate(namada_tm_p2p_peer_send_bytes_total{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}[5m])) / 1000",
           "legendFormat": "Outbound traffic",
           "range": true,
           "refId": "A"
@@ -1520,7 +1544,8 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "short",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1551,7 +1576,7 @@
             "uid": "${DS}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(namada_tm_p2p_peer_receive_bytes_total{chain_id=\"public-testnet-15.0dacadb8d663\"}[5m])) / 1000",
+          "expr": "sum(rate(namada_tm_p2p_peer_receive_bytes_total{chain_id=\"public-testnet-15.0dacadb8d663\",instance=\"$node:26660\"}[5m])) / 1000",
           "legendFormat": "Inbound  traffic",
           "range": true,
           "refId": "A"
@@ -1591,7 +1616,8 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percent",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1617,7 +1643,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1665,7 +1691,8 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percent",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1691,7 +1718,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1739,7 +1766,8 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percent",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1765,7 +1793,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1813,7 +1841,8 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percent",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1839,7 +1868,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1887,7 +1916,8 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percent",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1913,7 +1943,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1961,7 +1991,8 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percent",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1987,7 +2018,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -2029,7 +2060,8 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "short",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -2052,10 +2084,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -2097,7 +2130,8 @@
               }
             ]
           },
-          "unit": "bytes"
+          "unit": "bytes",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -2120,10 +2154,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -2165,7 +2200,8 @@
               }
             ]
           },
-          "unit": "bytes"
+          "unit": "bytes",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -2188,10 +2224,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -2237,7 +2274,8 @@
               }
             ]
           },
-          "unit": "bytes"
+          "unit": "bytes",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -2260,10 +2298,11 @@
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -2310,8 +2349,8 @@
       {
         "current": {
           "selected": false,
-          "text": "node",
-          "value": "node"
+          "text": "node_stakingpower",
+          "value": "node_stakingpower"
         },
         "datasource": {
           "type": "prometheus",
@@ -2338,8 +2377,8 @@
       {
         "current": {
           "selected": false,
-          "text": "1e63c5b90ee9",
-          "value": "1e63c5b90ee9"
+          "text": "1bdf6d47ae2b",
+          "value": "1bdf6d47ae2b"
         },
         "datasource": {
           "type": "prometheus",
@@ -2366,8 +2405,8 @@
       {
         "current": {
           "selected": false,
-          "text": "1e63c5b90ee9",
-          "value": "1e63c5b90ee9"
+          "text": "94.130.90.47",
+          "value": "94.130.90.47"
         },
         "datasource": {
           "type": "prometheus",
@@ -2429,6 +2468,6 @@
   "timezone": "",
   "title": "Namada Validator/Node Dashboard",
   "uid": "c31808b4-383a-44a4-a848-f6203a7967b1",
-  "version": 25,
+  "version": 7,
   "weekStart": ""
 }
