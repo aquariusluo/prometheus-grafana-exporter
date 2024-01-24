@@ -157,6 +157,8 @@ sudo ufw allow 9090
 sudo ufw allow 3000
 ```
 
+## Dashboard
+Home -> Dashboards -> Namada Validator/Node Dashboard
 
 ## License
 
